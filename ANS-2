@@ -1,0 +1,17 @@
+public class PrefixSumRange {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int[] prefixSum = new int[arr.length];
+
+        // Building prefix sum array
+        prefixSum[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            prefixSum[i] = prefixSum[i-1] + arr[i];
+        }
+
+        int L = 1, R = 3; // Example: Find sum from index 1 to 3
+        int rangeSum = prefixSum[R] - (L > 0 ? prefixSum[L-1] : 0);
+
+        System.out.println("Sum from index " + L + " to " + R + " is: " + rangeSum);
+    }
+}
