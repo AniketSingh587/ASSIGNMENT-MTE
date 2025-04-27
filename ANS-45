@@ -1,0 +1,12 @@
+// Priority Queue Concept:
+//
+// A priority queue is a special type of queue where each element is associated
+// with a priority, and elements are served according to their priority.
+//
+// In Java, PriorityQueue by default acts as a Min-Heap.
+//
+// Applications:
+// - Dijkstra’s shortest path algorithm
+// - Huffman encoding
+// - Scheduling processes in operating systems
+// - Real-time event simulation
