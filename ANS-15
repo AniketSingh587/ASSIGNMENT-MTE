@@ -1,0 +1,46 @@
+public class KthSmallestInMatrix {
+    public static int kthSmallest(int[][] matrix, int k) {
+        int n = matrix.length;
+        int low = matrix[0][0];
+        int high = matrix[n-1][n-1];
+
+        while (low < high) {
+            int mid = (low + high) / 2;
+            int count = 0;
+
+            for (int i = 0; i < n; i++) {
+                count += countLessEqual(matrix[i], mid);
+            }
+
+            if (count < k) {
+                low = mid + 1;
+            } else {
+                high = mid;
+            }
+        }
+        return low;
+    }
+
+    private static int countLessEqual(int[] row, int mid) {
+        int left = 0, right = row.length;
+        while (left < right) {
+            int m = (left + right) / 2;
+            if (row[m] <= mid) {
+                left = m + 1;
+            } else {
+                right = m;
+            }
+        }
+        return left;
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 5, 9},
+            {10, 11, 13},
+            {12, 13, 15}
+        };
+        int k = 8;
+        System.out.println("K-th Smallest: " + kthSmallest(matrix, k));
+    }
+}
