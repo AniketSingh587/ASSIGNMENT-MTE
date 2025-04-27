@@ -1,0 +1,11 @@
+// Linked List Concept:
+//
+// A linked list is a linear data structure where elements (nodes) are stored non-contiguously,
+// and each node contains a data field and a reference (link) to the next node.
+//
+// Applications:
+// - Dynamic memory allocation
+// - Implementing stacks, queues
+// - Graph adjacency representation
+// - Performing arithmetic on big integers
+// - Real-time systems where memory efficiency matters
