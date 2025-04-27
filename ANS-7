@@ -1,0 +1,11 @@
+// Sliding Window Technique Explanation:
+//
+// It is used to reduce the time complexity of problems involving 
+// arrays or strings that require checking all contiguous subarrays/substrings.
+// Instead of recalculating sums or properties again and again, 
+// we "slide" a window (a subarray) over the input and update our calculations efficiently.
+//
+// Commonly used in:
+// - Subarray sums
+// - Longest substring without repeating characters
+// - Maximum/minimum elements in a window
