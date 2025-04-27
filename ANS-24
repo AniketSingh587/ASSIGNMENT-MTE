@@ -1,0 +1,13 @@
+// Bit Manipulation Concept:
+//
+// Bit manipulation refers to the act of algorithmically manipulating bits or binary digits
+// (0 and 1) within an integer. It's used for optimization and solving problems faster.
+//
+// Advantages:
+// - Space efficiency (uses bits directly).
+// - Speed (bitwise operations are fast: AND, OR, XOR, NOT, SHIFT).
+//
+// Examples:
+// - Checking even/odd
+// - Swapping two numbers without temp variable
+// - Finding single non-repeating number among pairs
