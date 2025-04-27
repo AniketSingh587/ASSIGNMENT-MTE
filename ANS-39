@@ -1,0 +1,11 @@
+// Difference Between Subsets and Permutations:
+//
+// Subsets:
+// - Any combination of elements where order does not matter.
+// - Example: Subsets of {1,2} => {}, {1}, {2}, {1,2}
+//
+// Permutations:
+// - Arrangements of elements where order matters.
+// - Example: Permutations of {1,2} => {1,2}, {2,1}
+//
+// Subsets total = 2^n, Permutations total = n!
