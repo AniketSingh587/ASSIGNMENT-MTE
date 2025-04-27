@@ -1,0 +1,37 @@
+class ListNodeIntersection {
+    int val;
+    ListNodeIntersection next;
+    ListNodeIntersection(int val) {
+        this.val = val;
+    }
+}
+
+public class IntersectionOfLinkedLists {
+    public static ListNodeIntersection getIntersectionNode(ListNodeIntersection headA, ListNodeIntersection headB) {
+        ListNodeIntersection a = headA;
+        ListNodeIntersection b = headB;
+
+        while (a != b) {
+            a = (a == null) ? headB : a.next;
+            b = (b == null) ? headA : b.next;
+        }
+
+        return a;
+    }
+
+    public static void main(String[] args) {
+        // Example manually creating intersection
+        ListNodeIntersection common = new ListNodeIntersection(8);
+        common.next = new ListNodeIntersection(10);
+
+        ListNodeIntersection headA = new ListNodeIntersection(3);
+        headA.next = new ListNodeIntersection(7);
+        headA.next.next = common;
+
+        ListNodeIntersection headB = new ListNodeIntersection(99);
+        headB.next = common;
+
+        ListNodeIntersection intersection = getIntersectionNode(headA, headB);
+        System.out.println("Intersection Node: " + (intersection != null ? intersection.val : "No Intersection"));
+    }
+}
