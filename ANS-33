@@ -1,0 +1,10 @@
+// Sliding Window Technique in Arrays:
+//
+// It's a method for reducing the time complexity of problems that involve 
+// finding subarrays/subsets of elements that meet a condition.
+//
+// Applications:
+// - Maximum or minimum sum of subarrays
+// - Longest substring without repeating characters
+// - Maximum elements in a window
+// - Problems involving contiguous elements with constraints
