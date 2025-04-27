@@ -1,0 +1,9 @@
+// Dynamic Programming Concept:
+//
+// Dynamic programming (DP) is an optimization technique where
+// we solve complex problems by breaking them into smaller overlapping subproblems,
+// storing results to avoid redundant computation.
+//
+// In Maximum Subarray Problem:
+// - We use DP to track the maximum subarray ending at each index.
+// - We build the solution bottom-up using previous results (Kadane's Algorithm).
