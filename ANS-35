@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class TopKFrequentElements {
+    public static int[] topKFrequent(int[] nums, int k) {
+        HashMap<Integer, Integer> count = new HashMap<>();
+        for (int num : nums) {
+            count.put(num, count.getOrDefault(num, 0) + 1);
+        }
+
+        PriorityQueue<Integer> heap = new PriorityQueue<>((a, b) -> count.get(a) - count.get(b));
+
+        for (int num : count.keySet()) {
+            heap.offer(num);
+            if (heap.size() > k) {
+                heap.poll();
+            }
+        }
+
+        int[] res = new int[k];
+        for (int i = 0; i < k; i++) {
+            res[i] = heap.poll();
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1,1,1,2,2,3};
+        int k = 2;
+        int[] result = topKFrequent(nums, k);
+        System.out.print("Top " + k + " frequent elements: ");
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
+    }
+}
