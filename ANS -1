@@ -1,0 +1,3 @@
+// Prefix Sum Array Concept in Short:
+// A prefix sum array is an array where each element at index i is the sum of elements from index 0 to i in the original array.
+// It helps in answering sum queries efficiently in O(1) time after O(n) preprocessing.
