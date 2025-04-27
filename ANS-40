@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class MaxFrequencyElement {
+    public static int findMaxFrequency(int[] nums) {
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        int maxCount = 0, element = -1;
+
+        for (int num : nums) {
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
+            if (freq.get(num) > maxCount) {
+                maxCount = freq.get(num);
+                element = num;
+            }
+        }
+
+        return element;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1,3,2,3,4,3,5};
+        System.out.println("Element with max frequency: " + findMaxFrequency(nums));
+    }
+}
